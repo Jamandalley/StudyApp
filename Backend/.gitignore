@@ -1,0 +1,9 @@
+# Ignore environment files
+.env
+
+# Ignore node_modules
+node_modules/
+
+# Ignore specific files and folders in the 'src' directory
+/src/claudeAi.js
+/src/uploads/
