@@ -35,7 +35,7 @@ const upload = multer({ storage: storage });
 //const upload = multer({ dest: 'uploads/' });
 
 // Google Generative AI Setup
-const apiKey = process.env.API_KEY;
+const apiKey = "AIzaSyB8BtyLvkJK6fBtMvwJOfeKhiLNbnpjj4U";
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
@@ -96,7 +96,7 @@ async function generateQuestionsFromText(inputText) {
         });
 
         // Prompt for generating questions
-        const prompt = `Generate 10 multiple-choice questions from the following content:\n\n${inputText}\n\n \
+        const prompt = `Generate random 100 multiple-choice questions from the following content:\n\n${inputText}\n\n \
         This should proceed from basic to intermediate and then advance at appropriate proportion \
         to make the reader better understand the context.Format the output as a JSON array where each question has an id (starting from 1), text, \
         options (an array of 4 choices), and correctAnswer.`;
